@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+</head>
+<body onload="init()">
+	<h1>Welcome <span id="name"></span></h1>
+	<input type="button" value="Who am I?" onclick='whoami()'/> <!--Sample button that will query to backend-->
+	<input type="button" value="Logout!" onclick='logout()' />
+
+	<script type="text/javascript">
+		function init() {
+			$('span#name').html(localStorage.name);
+		}
+
+		function logout() {
+			//ajax call to get user credentials
+			$.ajax({
+				method: 'GET',
+				url: 'api/logout',
+				success: function(data) {
+					alert('Logout success!'); //alerts the user
+					//stores data to localStorage
+					localStorage.clear()
+					window.location.href = "/index.html"; //goes to a different page
+				},
+				error: function(error) {
+					alert('Something went wrong.');
+					console.log(error); //shows the message
+				}
+			});
+		}
+
+		function whoami() {
+			//ajax call to get user credentials
+			$.ajax({
+				method: 'GET',
+				url: 'api/whoami',
+				success: function(data) {
+					alert(data.message);
+				},
+				error: function(error) {
+					alert('Something went wrong.');
+					console.log(error); //shows the message
+				}
+			});
+		}
+	</script>
+</body>
+</html>

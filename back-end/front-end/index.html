@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+</head>
+<body>
+	<form>
+		<input type="text" placeholder="Username" id="username" /> <br />
+		<input type="password" placeholder="Password" id="password" /> <br />
+		<input type="button" value="Submit!" onclick="login()"/>
+	</form>
+	<script>
+		function login() {
+			let uname = $('input#username').val();
+			let pass = $('input#password').val();
+
+			//ajax call to get user credentials
+			$.ajax({
+				method: 'POST',
+				url: 'api/login',
+				data: {
+					username: uname,
+					password: pass
+				},
+				success: function(data) {
+					alert("Login success!"); //alerts the user
+					
+					//stores data to localStorage
+					localStorage.name = data.fname + ' ' + data.lname;
+					localStorage.username = data.username;
+
+					window.location.href = "/welcome.html"; //goes to a different page
+				},
+				error: function(error) {
+					if(error.status == 404) {
+						alert(JSON.stringify(error.responseJSON.message)); //shows the message
+					}
+				}
+			});
+		}
+	</script>
+</body>
+</html>
