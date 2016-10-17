@@ -1,0 +1,103 @@
+<!-- HTML Description: This html is the front-end for the anouncement page in applicant's point-of-view.-->
+
+<!-- Dropdown for the nav bar. -->
+<div class="row">
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#/applicant/announcement">Announcements</a></li>
+  <li><a href="#/applicant/profile">Profile</a></li>
+  <li><a href="#!">Sign-out</a></li>
+</ul>
+
+<!-- Navigation bar -->
+<nav>
+    <div id="nav"class="nav-wrapper blue accent-3">
+      <a href="#!" class="brand-logo">
+      <div id="logo">
+    <img src="assets/images/logo.png" width="60px" alt="" class="circle responsive-img">
+     <div id="fine"> Recruitment Management System</div></div>
+      </a>
+      <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+      <img id ="box" src ="assets/images/box.png" width = "35px" height = "35px" >
+      <i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+    <!-- When switched to mobile, the nav bar collpase into a side-bar.-->
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/applicant/announcement">Announcements</a></li>
+  <li><a href="#/applicant/profile">Profile</a></li>
+  <li><a href="#!">Sign-out</a></li>
+      </ul>
+    </div>
+  </nav><br>
+
+  <!--Content page, contains with card for the announcements-->
+   <div class="row">
+          <div class="col s12 m1">&nbsp;</div>
+          <div class="col s12 m6 white">
+            <div class="card">
+            <div id ="announce">
+              <span class="flow-text">Announcements</span>
+            </div>
+            </div>
+            <div class="card">
+            <div id ="app">
+              <span class="flow-text">Fr co-applicants</span>
+            </div>
+            </div>
+            
+            <div class="card">
+            <div id ="admin">
+              <span class="flow-text">Fr admin</span>
+            </div>
+            </div>
+
+
+          </div>
+          
+        
+
+    <!-- Posts the announcements -->
+    <div class="col s12 m4">
+      <div id ="emails" class="white">
+         <div id = "half1" class="card">
+         <span class="flow-text">New Announcement</span>
+       <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m12">
+            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+            <label for="icon_prefix2">To:</label>
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+
+      <!--Allows the applicant to write an announcement in a text area then sending it-->
+        <div>  
+          <div class="input-field col s12">
+            <textarea style = "height: 90px;" id="textarea1" class="materialize-textarea" length="120"></textarea>
+            <label for="textarea1">Message</label>
+          </div>
+        </div>
+         </div>
+        <div>
+        <div id="button">
+      <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action" >Submit
+        <i class="material-icons right">send</i>
+      </button>
+      </div>
+      </div>
+       </div>
+
+      </div>
+      
+
+
+   </div>
+   <div class="col s12 m1"></div>
+ </div>
+
+<!-- Imports the custom.js-->
+<script type="text/javascript" src="/../assets/js/custom.js"></script>

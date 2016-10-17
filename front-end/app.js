@@ -3,16 +3,17 @@
     angular
         .module('app', ['ngRoute'])
         .config(config)
-        /*.directive('delButtonDirective', function() {
+        .directive('addButtonDirective', function() {
             return {
                 restrict: "A",
                 link: function(scope, elem, attrs) {
                     $(elem).on('click', function() {
-                        $('#delete-modal').modal('show');
+                        $('#modal1').modal('show');
                     });
                 }
             }
         })
+        /*
         .directive('editButtonDirective', function() {
             return {
                 restrict: "A",
@@ -47,21 +48,30 @@
                 'templateUrl': 'views/main.view.html',
                 'caseInsensitiveMatch': true
             })
-            .when('/profile', {
-                'templateUrl': 'views/profile.view.html',
+            .when('/applicant/profile', {
+                'templateUrl': 'views/applicant/profile.view.html',
                 'caseInsensitiveMatch': true
             })
-            .when('/progress', {
-                'templateUrl': 'views/progress.view.html',
+            .when('/applicant/announcement', {
+                'templateUrl': 'views/applicant/announcement/applicant.view.html',
                 'caseInsensitiveMatch': true
             })
-            .when('/announcement/admin', {
-                'templateUrl': 'views/announcement/admin.view.html',
+            .when('/superadmin/announcement', {
+                'templateUrl': 'views/superadmin/announcement/admin.view.html',
                 'caseInsensitiveMatch': true
             })
-            .when('/announcement/applicant', {
-                'templateUrl': 'views/announcement/applicant.main.view.html',
+            .when('/superadmin/progress', {
+                'templateUrl': 'views/superadmin/progress/superadmin.view.html',
+                'caseInsensitiveMatch': true
+            })
+            .when('/admin/announcement', {
+                'templateUrl': 'views/admin/announcement/admin.view.html',
+                'caseInsensitiveMatch': true
+            })
+            .when('/admin/progress', {
+                'templateUrl': 'views/admin/progress/admin.view.html',
                 'caseInsensitiveMatch': true
             });
+            
     }    
 })();

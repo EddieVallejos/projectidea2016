@@ -1,36 +1,47 @@
+<!-- HOME PAGE -->
+
 <div class="container" id="cont">
+
+  <!-- ACSS LOGO -->
   <div class="row">
-    <div class="col s12 m6 l64">
-      <div class="row center">
-          <a href="#"><img class="responsive-img center-align" id="acsslogo" src="/../assets/images/logo.png" height="360px" width="311px" align="middle"></a>
-        </div>
-    </div>
     <div class="col s12 m6 l6">
+      <div class="row center">
+          <a href="#"><img class="responsive-img center-align" id="acsslogo" src="assets/images/logo.png" height="360px" width="311px" align="middle"></a>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l6">
+      <!-- LOGIN & SIGN UP TABS -->
       <div class="row">
         <div class="col s12 white">
-          <ul class="tabs">
+          <ul id="mainTabs" class="tabs">
             <li class="tab col s1 tab-accent-blue"><a class="active blue-text text-darken-3" href="#login">Login</a></li>
             <li class="tab col s1 tab-accent-blue"><a class="blue-text text-darken-3" href="#signup">Sign up</a></li>
           </ul>
         </div>
 
+        <!-- LOGIN FORM -->
         <div id="login" class="col s12 white">
           <form class="s12">
+            <!-- USERNAME -->
             <div class="row">
               <div class="input-field col s12">
                 <i class="tiny material-icons prefix">perm_identity</i>
                 <input placeholder="Username" id="username" type="text">
               </div>
             </div>
+            <!-- PASSWORD -->
             <div class="row">
               <div class="input-field col s12">
                 <i class="tiny material-icons prefix">lock_outline</i>
                 <input placeholder="Password" id="password" type="password">
               </div>
             </div>
-              <div class="input-field col s12 center-align">
-                <a class="blue-text text-darken-3" href="#">Forgot Password?</a>
-              </div>
+            <!-- FORGOT PASSWORD -->
+            <div class="input-field col s12 center-align">
+              <a class="blue-text text-darken-3" href="#">Forgot Password?</a>
+            </div>
+            <!-- LOGIN BUTTON -->
             <div class="row">
               <div class="input-field col s12">
               <a href="#" class="btn waves-effect waves-light col s12 blue darken-3">Login</a>
@@ -39,20 +50,23 @@
           </form>
         </div>
 
+        <!-- SIGN UP FORM -->
         <div id="signup" class="col s12 white">
           <form class="s12">
-            <div class="row">
-              <div class="input-field col s6">
+            <!-- NAME -->
+            <div class="row" id="signupinput">
+              <div class="input-field col s5">
                 <i class="tiny material-icons prefix">contacts</i>
                 <input placeholder="First name" id="fname" type="text" class="inputfields">
               </div>
               <div class="input-field col s4">
                 <input placeholder="Last name" id="lname" type="text" class="inputfields">
               </div>
-              <div class="input-field col s2">
+              <div class="input-field col s3">
                 <input placeholder="MI" id="mi" type="text" class="inputfields">
               </div>
             </div>
+            <!-- USERNAME -->
             <div class="row">
               <div class="input-field col s12">
                 <i class="tiny material-icons prefix">perm_identity</i>
@@ -60,17 +74,20 @@
               </div>
             </div>
             <div class="row">
+              <!-- PASSWORD -->
               <div class="input-field col s6">
                 <i class="tiny material-icons prefix">lock_outline</i>
                 <input placeholder="Password" id="password" type="password" class="inputfields">
               </div>
+              <!-- RE-ENTER PASSWORD -->
               <div class="input-field col s6">
                 <input placeholder="Re-enter password" id="reenter" type="password" class="inputfields">
               </div>
             </div>
             <div class="row">
+              <!-- USER TYPE -->
               <div class="input-field col s6">
-                <i class="tiny material-icons prefix">person_pin</i> <!--work-->
+                <i class="tiny material-icons prefix">person_pin</i>
                   <select class="inputfields">
                     <option value="" disabled selected>Type</option>
                     <option value="1">Super Admin</option>
@@ -78,11 +95,13 @@
                     <option value="3">Applicant</option>
                   </select>
               </div>
+              <!-- CODE -->
               <div class="input-field col s6">
-                <i class="tiny material-icons prefix">vpn_key</i> <!--live_help-->
+                <i class="tiny material-icons prefix">vpn_key</i>
                 <input placeholder="Code" id="code" type="text" class="inputfields">
               </div>
             </div>
+            <!-- SIGN UP BUTTON -->
             <div class="row">
               <div class="input-field col s12">
                 <a href="#" class="btn waves-effect waves-light col s12 blue darken-4">Sign up</a>
@@ -90,7 +109,26 @@
             </div>
           </form>
         </div>
-
+      <div>
     </div>
   </div>
+  <!-- SLIDER BACKGROUND -->
+  <div id="imgslider" class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+      </li>
+    </ul>
+  </div>
 </div>
+
+<script type="text/javascript" src="/../assets/js/custom.js"></script>

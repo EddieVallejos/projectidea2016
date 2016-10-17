@@ -1,0 +1,261 @@
+<!-- HTML Description: This is the front-end for the progress page in the point of view of super-admin.-->
+
+<!-- Dropdown for the nav bar -->
+ <div class="row">
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#/superadmin/progress">Progress</a></li>
+  <li><a href="#/superadmin/announcement">Announcements</a></li>
+  <li><a href="#!">Sign-out</a></li>
+</ul>
+
+<!--Navigation bar-->
+<nav>
+    <div id="nav"class="nav-wrapper blue accent-3">
+      <a href="#!" class="brand-logo">
+      <div id="logo">
+    <img src="assets/images/logo.png" width="60px" alt="" class="circle responsive-img">
+     <div id="fine"> Recruitment Management System</div></div>
+      </a>
+      <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+      <img id ="box" src ="assets/images/box.png" width = "35px" height = "35px" >
+      <i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+<!--When switched into mobile, the nav abr turns into side bar -->
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/superadmin/progress">Progress</a></li>
+  <li><a href="#/superadmin/announcement">Announcements</a></li>
+  <li><a href="#!">Sign-out</a></li>
+
+      </ul>
+    </div>
+  </nav><br>
+
+<!--Content of the page -->
+  <div class="row">
+      <div class="col s12 m1"></div>
+      <div class="col s12 m6">
+        <div class="card white lighten-4">
+          <div class="card-content">
+            <ul class="collapsible popout" data-collapsible="accordion">
+              <li>
+
+              <!--Shows the range for the progress -->
+                <div class="collapsible-header">
+                  <div class="valign-wrapper">
+                    <img src="pics/user4.png" width="40px" alt="" class="circle responsive-img">
+                    <span class="grey-text text-darken-1">NAME</span>
+                    <div class="container">
+                      <p class="range-field">
+                        <input type="range" id="test1" min="0" max="100" step="20"/>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul><br>
+
+
+            <!-- Button for delete and adding applicant -->
+            <div class="center">
+              <button id="addRecruit" class="blue accent-3 btn">Add Applicant</button>
+              
+                <a class="blue accent-3 btn">DELETE</a>
+              </div><br>
+              <div class="center">
+                <span class="grey-text text-darken-1">APPLICANT</span>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+        
+        <div class="col s12 m4">
+          <div class="card white lighten-4">
+            <div class="card-content">
+              <div class="valign-wrapper">
+                <img src="pics/user4.png" width="40px" alt="" class="circle responsive-img">
+                <span class="grey-text text-darken-1">NAME</span>
+              </div><br>
+              <div class="valign-wrapper">
+                <img src="pics/user1.png" width="40px" alt="" class="circle responsive-img">
+                <span class="grey-text text-darken-1">NAME</span>
+              </div><br>
+              <div class="valign-wrapper">
+                <img src="pics/user2.png" width="40px" alt="" class="circle responsive-img">
+                <span class="grey-text text-darken-1">NAME</span><br><br>
+              </div><br>
+              <div class="center">
+                <button data-target="modal2" id="addRecruiter" class="blue accent-3 btn modal-trigger" modal>Add Admin</button>
+              </div>
+            </div>
+            <div class="center">
+            <span class="grey-text text-darken-1">ADMIN</span>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <div class="col s12 m1"></div>
+  </div>
+
+  <!-- MODALS -->
+
+  <!-- ADD RECRUITER -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Add Applicant</h4>
+      <div id="signup" class="col s12 white">
+        <form class="s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="tiny material-icons prefix">contacts</i>
+              <input placeholder="First name" id="fname" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s4">
+              <input placeholder="Last name" id="lname" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s2">
+              <input placeholder="MI" id="mi" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s2">
+              <input placeholder="Suffix" id="suffix" type="text" class="inputfields">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">perm_identity</i>
+              <input placeholder="Username" id="username2" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">lock_outline</i>
+              <input placeholder="Password" id="password" type="password" class="inputfields">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">perm_identity</i>
+              <input placeholder="Email Address" id="email" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">lock_outline</i>
+              <input placeholder="Contact Number" id="contact" type="text" class="inputfields">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="tiny material-icons prefix">contacts</i>
+              <input placeholder="Student Number" id="studno" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s4">
+              <input placeholder="Degree Program" id="degprog" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s2">
+              <input placeholder="Year" id="year" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s2">
+              <input placeholder="GWA" id="gwa" type="text" class="inputfields">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">perm_identity</i>
+              <textarea id="Essay1" class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Essay 1</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">lock_outline</i>
+              <textarea id="Essay2  " class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Essay 2</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">perm_identity</i>
+              <input placeholder="Adviser" id="adv" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">lock_outline</i>
+              <input placeholder="Preferred PL" id="pl" type="text" class="inputfields">
+            </div>
+          </div>
+          <div>
+            <label>Progress</label>
+            <input type="range">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="addRec" class=" modal-action modal-close blue accent-3 btn" >Add</a>
+    </div> 
+  </div>
+
+  <!-- ADD RECRUIT -->
+  <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Add Admin</h4>
+      <div id="signup" class="col s12 white">
+        <form class="s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="tiny material-icons prefix">contacts</i>
+              <input placeholder="First name" id="fname" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s4">
+              <input placeholder="Last name" id="lname" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s2">
+              <input placeholder="MI" id="mi" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s2">
+              <input placeholder="Suffix" id="suffix" type="text" class="inputfields">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="tiny material-icons prefix">perm_identity</i>
+              <input placeholder="Username" id="username2" type="text" class="inputfields">
+            </div>
+            <div class="input-field col s4">
+              <i class="tiny material-icons prefix">lock_outline</i>
+              <input placeholder="Password" id="password" type="password" class="inputfields">
+            </div>
+            <div class="input-field col s4">
+              <i class="tiny material-icons prefix">contacts</i>
+              <input placeholder="Student Number" id="studno" type="text" class="inputfields">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="tiny material-icons prefix">person_pin</i> <!--work-->
+              <select class="select">
+                <option value="" disabled selected>Team</option>
+                <option value="1">Log</option>
+                <option value="2">Docu</option>
+                <option value="3">Fin</option>
+                <option value="4">Mem</option>
+                <option value="5">Acads</option>
+                <option value="6">Pub</option>
+              </select>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="addRecr" class="modal-action modal-close blue accent-3 btn">Add</a>
+    </div> 
+  </div>
+
+  
+</div>
+
+<script type="text/javascript" src="/../../../assets/js/custom.js"></script>

@@ -1,0 +1,80 @@
+<!--HTML Description: This html is the front-end for the profile of the applicant-->
+
+
+    <!--Dropdown for the nav bar-->
+    <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#/applicant/announcement">Announcements</a></li>
+  <li><a href="#/applicant/profile">Profile</a></li>
+  <li><a href="#!">Sign-out</a></li>
+</ul>
+
+<!--Navigation Bar -->
+<nav>
+    <div id="nav" class="nav-wrapper blue accent-3">
+      <a href="#!" class="brand-logo">
+          <div id="logo">
+          <img src="assets/images/logo.png" width="60px" alt="" class="circle responsive-img">
+          <div id="fine">Recruitment Management System</div>
+          </div>
+        </a>
+      <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+      <img id ="box" src ="assets/images/box.png" width = "35px" height = "35px" >
+      <i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+<!--When switched into mobile, the nav bar collapse into side bar -->
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+       <li><a href="#/applicant/announcement">Announcements</a></li>
+  <li><a href="#/applicant/profile">Profile</a></li>
+  <li><a href="#!">Sign-out</a></li>
+      </ul>
+    </div>
+  </nav><br>
+
+
+<!-- Profile of the applicant -->
+  <div class="row">
+  <div class= "col s12 m1">&nbsp;</div>
+  <div class= "col s12 m6 white">
+        <div class= "col s12 white">
+          <img  class="responsive-img" id="dp" src="../assets/images/dp.jpg" width ="200px" height="250px">
+          <h5 id="name"> Krisanta S. Agdan </h5>
+          <form action="#">
+          <p class="range-field">
+            <input type="range" id="test5" min="0" max="100" step="20"/>
+          </p>
+        </form>
+
+        <div class="row">
+          <div id="app1" class="card"> PROGRESS
+
+          </div>
+        
+
+        </div>
+
+  </div>
+   </div>
+
+<!-- Editing of the profile -->
+  <div class= "col s12 m4 white">
+    <div class="row">
+          <div id="app2" class="card"> PROFILE
+          <div id="button2">
+          <button class="waves-effect waves-light btn blue darken-4">EDIT</button>
+          </div>
+          </div>
+
+        </div>
+    </div>
+
+  </div>
+  <div class= "col s12 m1"></div>
+
+
+
+   </div>
+
+<script type="text/javascript" src="/../assets/js/custom.js"></script>

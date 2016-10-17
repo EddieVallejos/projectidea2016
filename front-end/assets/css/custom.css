@@ -1,4 +1,194 @@
+/* HOME PAGE */
+/* container margin */
 #cont {
-    margin-top: 10%;
-    margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+ /* label color */
+.input-field label {
+color: #0288d1;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #0288d1;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #0288d1;
+ box-shadow: 0 1px 0 0 #0288d1;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid #0288d1;
+ box-shadow: 0 1px 0 0 #0288d1;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid #0288d1;
+ box-shadow: 0 1px 0 0 #0288d1;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #0288d1;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+ border-bottom: 1px solid #0288d1;
+ box-shadow: 0 1px 0 0 #0288d1;
+}
+/* valid color */
+.input-field input[type=password].valid {
+ border-bottom: 1px solid #0288d1;
+ box-shadow: 0 1px 0 0 #0288d1;
+}
+/* invalid color */
+.input-field input[type=password].invalid {
+ border-bottom: 1px solid #0288d1;
+ box-shadow: 0 1px 0 0 #0288d1;
+}
+/* text color of dropdown content */
+ul.dropdown-content.select-dropdown li span {
+  color: #000000; 
+}
+/* highlight color */
+.tabs .indicator {
+  background-color: #0288d1;
+}
+/* slider as background of the body */
+.slider.fullscreen {
+  z-index: -1;
+}
+/* hidden circular indicators */
+.slider .indicators .indicator-item {
+  display: inline-block;
+  transition: background-color .3s;
+  visibility: hidden;
+}
+
+#signupinput {
+  margin-bottom: 0px;
+}
+#row {
+  margin-top: 15px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 600px;
+}
+#app {
+  margin-top: 20px;
+  color: #bdbdbd;
+  line-height: 1.5;
+  background-color: white;
+}
+#fine {
+  margin-left: 70px;
+  margin-top: -90px;
+  color: white;
+}
+#admin {
+  margin-top: 10px;
+  color: #bdbdbd;
+  line-height: 1.5;
+  background-color: white;
+}
+#announce { 
+  color: #bdbdbd;
+  line-height: 2.8;
+  text-align: center;
+  background-color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+#half1 {
+  background-color: white;
+  height: 100%;
+  width: 90%;
+  padding: 30px;
+  margin-bottom: -200px;
+}
+#logo {
+  margin: 10px;
+  margin-left: 30px;
+}
+#nav {
+  height: 80px;
+  width: 100%;
+
+}
+
+#box {
+  margin-top: 16px;
+  margin-right: -15px;
+}
+
+#text  {
+  margin-top: 40px;
+  background-color: white;
+}
+
+#an1 {
+color: #bdbdbd;
+line-height: 2.8;
+background-color: white;
+height: 240px;
+}
+
+#act {
+  margin-top: 40px;
+  color: #bdbdbd;
+  background-color: white;
+  margin-right: 40px;
+  padding: 10px;
+  text-align: center;
+}
+#button {
+  text-align: center; 
+  margin-bottom: 10px;
+}
+#button1 {
+  text-align: right; 
+  margin-bottom: 10px;
+}
+#dp {
+  margin-top: 20px;
+  border: 5px solid #0d47a1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  color: white;
+}
+#name {
+  color: white;
+  text-align: center;
+}
+#app1 {
+  margin-top: 20px;
+  height: 180px;
+  color: #bdbdbd;
+  line-height: 2.8;
+  background-color: white;
+  margin-top: 10px;
+}
+#app2 {
+  margin-top: 20px;
+  color: #bdbdbd;
+  line-height: 2.8;
+  background-color: white;
+  padding-right: 10px;
+}
+#button2{
+  text-align: right;
+  margin-left: 10px;
+}
+#mainTabs {
+  overflow: hidden;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
 }

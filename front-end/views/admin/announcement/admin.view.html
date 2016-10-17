@@ -1,0 +1,73 @@
+<!--HTML Description: This html is the front-end for the announcements page in the admin point-of-view.-->
+
+ <div class="row">
+    <ul id="dropdown1" class="dropdown-content"> <!--Dropdown for the nav bar content-->
+  <li><a href="#/admin/progress">Progress</a></li>
+  <li><a href="#/admin/announcement">Announcement</a></li>
+  <li><a href="#!">Sign-out</a></li>
+</ul>
+<nav>
+    <div id="nav"class="nav-wrapper blue accent-3"> <!--Navigation bar-->
+      <a href="#!" class="brand-logo">
+      <div id="logo">
+    <img src="assets/images/logo.png" width="60px" alt="" class="circle responsive-img">
+     <div id="fine"> Recruitment Management System</div></div>
+      </a>
+      <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+      <img id ="box" src ="assets/images/box.png" width = "35px" height = "35px" > <!--Imports the logo for the nav bar-->
+      <i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+      <!-- When change to mobile view, it collapse into a side-navigation bar-->
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> 
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/admin/progress">Progress</a></li>
+  <li><a href="#/admin/announcement">Announcement</a></li>
+        <li><a href="#!">Sign-out</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!--Content page-->
+  <div class="row">
+    <div class="col s12 m1 white">&nbsp;</div>
+    <div class="col s12 m6 white">
+      <div class="row">
+      <form class="card">
+       <div id="text" class="row">
+        <div class="input-field col s12">
+          <!-- Text area for the announcement with a button for posting -->
+          <textarea id="textarea1" class="materialize-textarea" placeholder="Announcement"></textarea>
+          <div id="button1">
+          <a class="waves-effect waves-light btn blue darken-4">POST</a>
+          </div>
+            </div>
+          </div>
+        </form>
+      </div>
+         <!-- Card panel containing the announcements-->
+         <div  class="row"> 
+          <div id = "an1" class="card"> <h5>Announcements </h5>
+        </div>
+      </div>
+
+
+  </div>
+
+    <div class="col s12 m4 white">
+      <div class="row">
+       <div class="col s12">
+        <div id = "act" class="card"> <h6> ACTIVITIES OF ADMIN AND APPLICANT</h6></div>
+
+        </div>
+      </div>
+
+
+  </div>
+  <div class="col s12 m1 white"></div>
+
+   </div>
+<!-- Imports the custom.js-->          
+<script type="text/javascript" src="/../../../assets/js/custom.js"></script>
