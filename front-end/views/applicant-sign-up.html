@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>[ACSS] Application</title>
+         <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="../assets/materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
+    </head>
+
+    <body class="container">
+        <div class="">
+            <div class="card bordered z-depth-2">
+                <div class="card-header light-blue darken-3">
+                    <a href="#" class="white-text"><img class="responsive-img center-align" id="acsslogo" src="../assets/images/logo.png" id="acsslogo" align="middle"></a>
+                </div>
+                <div class="card-content">
+                    <form>
+                        <label>Credentials</label>
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6">
+                                <input id="username" type="text" class="validate">
+                                <label for="username">&nbsp;&nbsp;&nbsp;Username</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">&nbsp;&nbsp;&nbsp;Password</label>
+                            </div>
+                        </div>
+                        <label>Personal Information</label>
+                        <div class="row">
+                            <div class="input-field col s12 m3 l3">
+                                <input id="lname" type="text" class="validate">
+                                <label for="lname">&nbsp;&nbsp;&nbsp;Last name</label>
+                            </div>
+                            <div class="input-field col s12 m3 l3">
+                                <input id="fname" type="text" class="validate">
+                                <label for="fname">&nbsp;&nbsp;&nbsp;First name</label>
+                            </div>
+                            <div class="input-field col s12 m2 l2">
+                                <input id="mname" type="text" class="validate">
+                                <label for="mname">&nbsp;&nbsp;&nbsp;Middle name</label>
+                            </div>
+                            <div class="input-field col s12 m2 l2">
+                                <input id="suffix" type="text" class="validate">
+                                <label for="Suffix">&nbsp;&nbsp;&nbsp;Suffix</label>
+                            </div>
+                            <div class="input-field col s12 m2 l2">
+                                <input id="nname" type="text" class="validate">
+                                <label for="nname">&nbsp;&nbsp;&nbsp;Nickname</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6">
+                                <input id="email" type="text" class="validate">
+                                <label for="email">&nbsp;&nbsp;&nbsp;Email address</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6">
+                                <input id="contact" type="text" class="validate">
+                                <label for="contact">&nbsp;&nbsp;&nbsp;Contact number</label>
+                            </div>
+                        </div>
+                        <label>Educational Information</label>
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6">
+                                <input id="studno" type="text" class="validate">
+                                <label for="studno">&nbsp;&nbsp;&nbsp;Student number</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6">
+                                <input id="course" type="text" class="validate">
+                                <label for="course">&nbsp;&nbsp;&nbsp;Degree program</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6">
+                                <input id="adviser" type="text" class="validate">
+                                <label for="adviser">&nbsp;&nbsp;&nbsp;Adviser</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6">
+                                <select class="inputfields">
+                                    <option value="" disabled selected>Year in curriculum</option>
+                                    <option value="1">Sophomore</option>
+                                    <option value="2">Junior</option>
+                                    <option value="3">Senior</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6">
+                                <input id="gwa" type="text" class="validate">
+                                <label for="gwa">&nbsp;&nbsp;&nbsp;Overall GWA</label>
+                            </div>
+                            <div class="input-field col s12 m6 l6">
+                                <input id="gwa" type="text" class="validate">
+                                <label for="gwa">&nbsp;&nbsp;&nbsp;Preferred programming language/s</label>
+                            </div>
+                        </div>
+                        <label>Some Other Questions</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="why" type="text" class="validate"></input>
+                                <label for="why">&nbsp;&nbsp;&nbsp;Why do you want to join our organization?</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="what" type="text" class="validate"></input>
+                                <label for="what">&nbsp;&nbsp;&nbsp;What can you offer to our organization?</label>
+                            </div>
+                        </div>
+                        <label>Schedule</label>
+                        <div class="row" style="margin-top:-12px;">
+                            <div class="input-field col s12">
+                                <div class="file-field input-field">
+                                    <div class="btn grey lighten-2 black-text">
+                                        <span>Browse</span>
+                                        <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12" style="text-align:center;">
+                                <input type="checkbox" class="filled-in" id="filled-in-box">
+                                <label for="filled-in-box">I certify that the above information is true and correct as to the best of my knowledge.</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 center-align">
+                                <a href="#" class="btn waves-effect waves-light light-blue darken-3" id="signup">Sign up</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../assets/materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="../assets/js/custom.js"></script>
+    </body>
+</html>
