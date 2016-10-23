@@ -12,12 +12,15 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
+    "connect-redis": "*",
+    "crypto": "*",
     "express": "^4.14.0",
-    "lodash": "^4.15.0",
+    "express-session": "*",
     "method-override": "^2.3.6",
-    "morgan": "^1.7.0",
     "mysql": "^2.11.1",
-    "winston": "^2.2.0"
+    "anytv-node-importer": "*",
+    "redis": "*",
+    "request": "*"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"

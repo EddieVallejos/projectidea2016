@@ -1,10 +1,19 @@
 'use strict';
+const path 	= require('path');
 
-module.exports = {
+const config =  {
+	PORT: 8000,
+	IP: '127.0.0.1',
+
+	ASSETS_DIR: path.normalize(__dirname + '/../front-end'),
     DEVELOPMENT: {
-        HOST: 'localhost',
-        USER: 'root',
-        PASSWORD: 'arianne',
-        DATABASE: 'recruitment_management_system'
+        host: 'localhost',
+        user: 'root',
+        password: 'admin',
+        database: 'recruitment_management_system'
     },
-};
+
+    COOKIE_SECRET: '1LUVC4TS'
+}
+
+module.exports = config;

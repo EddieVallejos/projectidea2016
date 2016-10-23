@@ -2,25 +2,8 @@
 
 const db = require(__dirname + '/../lib/mysql');
 
-exports.add_recruit = (req, res, next) => {
-
-	const query_string ='INSERT INTO codes SET ?'; 
-   	const payload = {
-        code : random(),
-        usertype : req.body.usertype,
-    }
-      
-    db.query(query_string, payload, (err, data) => {
-        if(!err) {
-            console.log('CODE SUCCESSFULLY GENERATED!');
-        } else {
-            console.log(err);
-        }
-    });
-};
-
 exports.update_progress = (req, res, next) => {
-    const query_string ='UPDATE recruit SET progress = ? WHERE studno = ?';
+    const query_string = 'UPDATE recruit SET progress = ? WHERE studno = ?';
     const payload = [req.body.progress, req.body.studno];
     
     db.query(query_string, payload, (err, data) => {
@@ -32,17 +15,64 @@ exports.update_progress = (req, res, next) => {
     });
 };
 
-function random() {
-  var rand = "";
-  for(var i=0; i<6; i++) {
-    var category = Math.floor((Math.random() * 3) + 1);
-    if (category == 1) {
-      rand = rand + Math.floor((Math.random() * 9));
-    } else if (category == 2) {
-      rand = rand + String.fromCharCode(Math.floor((Math.random() * 26) + 65));
-    } else {
-      rand = rand + String.fromCharCode(Math.floor((Math.random() * 26) + 97));
+exports.post_announcements = (req, res, next) => {
+    const query_string = 'INSERT INTO announcements SET ?';
+    var datetime = new Date();
+    var date = datetime.getFullYear() + "-" + datetime.getMonth() + "-" + datetime.getDay();
+    var time = datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds();
+    const payload = {
+        announcement: req.body.announcements,
+        dateposted: date,
+        timeposted: time,
+        recipient: req.body.recipient
     }
-  }
-  return rand;
-}
+    
+    db.query(query_string, payload, (err, data) => {
+        if(!err) {
+            console.log('ANNOUNCEMENT SUCCESSFULLY POSTED!');
+            res.send(payload);
+        } else {
+            console.log(err);
+        }
+    });
+};
+
+exports.promote_applicant = (req, res, next) => {
+	const query_string = 'SELECT * from recruit WHERE studno = ?';
+	const payload = req.body.studno;
+
+    db.query(query_string, payload, (err, data) => {
+        if(data.length != 0) {
+        	const query_string2 = 'UPDATE account SET ?';
+        	const payload2 = { 'usertype': 'Member' };
+	        db.query(query_string2, payload2);
+
+            const query_string3 = 'INSERT INTO member SET ?';
+            const payload3 = {
+		    	username: data[0].username,
+		    	password: data[0].password,
+		    	studno: data[0].studno,
+		    	surname: data[0].surname,
+		    	givenname: data[0].givenname,
+		    	middlename: data[0].middlename,
+		    	suffix: data[0].suffix,
+		    	role: 'Recruiter'
+            }
+
+            db.query(query_string3, payload3, (err, data) => {
+		        if(!err) {
+		        	console.log('APPLICANT SUCCESSFULLY PROMOTED!');
+		        } else {
+		            console.log(err);
+		        }
+	    	});
+
+	    	const query_string4 = 'DELETE FROM recruit WHERE studno = ?';
+            const payload4 = req.body.studno;
+            db.query(query_string4, payload4);
+
+        } else {
+            console.log('APPLICANT DOES NOT EXIST');
+        }
+    });
+};
