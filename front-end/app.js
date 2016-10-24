@@ -71,10 +71,6 @@
                 'templateUrl': 'views/admin.html',
                 'caseInsensitiveMatch': true
             })
-            .when('/login', {
-                'templateUrl': 'views/login.html',
-                'caseInsensitiveMatch': true
-            });
             
     }    
 })();

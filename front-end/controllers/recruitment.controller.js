@@ -7,38 +7,22 @@ angular
 StudentCtrl.$inject = ['$scope', 'RecruitmentService'];
 
 function RecruitmentCtrl($scope, RecruitmentService) {
+    $scope.user = {};
 
-    /*$scope.students = [];
-
-    populateStudents();
-
-    function populateStudents() {
-        StudentService.getAllStudents().success((students) => {
-            $scope.students = students.students;
-        })
-    }*/
-
-    $scope.recruit = {};
-
-    $scope.addRecruit = function(applicant) {
+    $scope.createAccount = function(user) {
     	console.log("added")
-        RecruitmentService.addRecruit(applicant);
+        RecruitmentService.createAccount(user);
     }
 
-
-    $scope.editProfile = function(applicant) {
-        RecruitmentService.updateProfile(applicant);
+    $scope.login = function(user) {
+    	RecruitmentService.login(user);
     }
 
-    $scope.editProgress = function(applicant) {
-        RecruitmentService.updateProgress(applicant);
+    $scope.logout = function(user) {
+        RecruitmentService.logout(user);
     }
 
-    /*$scope.deleteStudent = function() {
-        console.log($scope.student.id);
-        StudentService.deleteStudent($scope.student.id)
-            .success(function(data) {
-                alert('DELETED!');
-            });
-    }*/
+    $scope.appointAdmin = function(user) {
+        RecruitmentService.appointAdmin(user);
+    }
 }
