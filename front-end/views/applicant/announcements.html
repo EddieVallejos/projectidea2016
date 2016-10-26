@@ -1,0 +1,92 @@
+<!-- NAV BAR -->
+<div class="navbar-fixed"> 
+    <nav class="blue accent-4">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#/applicant/home" class="brand-logo tooltipped" data-position="right" data-tooltip="Home">
+                    <div class="row">
+                      <!-- ACSS LOGO -->
+                      <div class="col s12 m2"><img src="/../../assets/images/logo.png" id="acsslogo"></div>
+                      <!-- APP NAME -->
+                      <div class="col s12 m10">
+                        <span class="white-text" id="appname">ACSS++ | Announcement</span>
+                      </div>
+                    </div>
+                </a>
+                <!-- MENU -->
+                <ul class="right hide-on-med-and-down">
+                    <li>username</li>
+                    <li><a href="#/applicant/profile" class="tooltipped" data-position="bottom" data-tooltip="Profile"><i class="material-icons">perm_identity</i></a></li>
+                    <li><a href="#/applicant/announcement" class="tooltipped" data-position="bottom" data-tooltip="Announcement"><i class="material-icons">announcement</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-beloworigin="true" data-hover="true" data-activates="dropdown1"><i class="material-icons">settings</i></a></li>
+                </ul>
+                <!-- SETTINGS DROPDOWN -->
+                <ul id="dropdown1" class="dropdown-content">
+                  <li><a href="#!">Sign Out</a></li>
+                </ul>
+                <!-- SIDE NAV FOR MOBILE -->
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><div class="userView light-blue darken-3">
+                    <a href="#!user"><img class="circle" src="assets/images/jem.jpg"></a>
+                    <a href="#!name"><span class="white-text name">Jemimah Mae Molina</span></a>
+                    <a href="#!email"><span class="white-text email">jhmolina@up.edu.ph</span></a>
+                </div></li>
+                    <li><a href="#/applicant/home">Home</a></li>
+                    <li><a href="#/applicant/profile">Profile</a></li>
+                    <li><a href="#/applicant/announcement">Announcements</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--Main contents-->
+<div class="container">
+    <!--Text areaa-->
+    <div class="row">
+        <div class="card">
+            <div class="card-content" id="textareaPost">
+                <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea1" class="materialize-textarea" ng-model='announcement' placeholder="Post announcement..."></textarea>
+                    </div>
+                </div>
+                <div class ="row right-align">
+                    <button class="btn waves-effect waves-light blue accent-3" type="submit" name="action" ng-click='postAnnouncement(announcement)'>POST
+                         <i class="material-icons right">send</i>
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- POSTS -->
+    <div class="row" style="margin-top: -20px;">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content" ng-repeat="a in announcements | orderBy: '-timeposted'">
+                    <div class="collapsible-header black-text">
+                        <p> {{a.announcement}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MODAL STRUCTURES-->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>New post..<h4>
+        <!--TEXT AREA FOR NEW POST-->
+        <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">EDIT</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="/../../assets/js/custom.js"></script>

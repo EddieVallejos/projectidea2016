@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">      
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/materialize/js/materialize.min.js"></script>
+    <script src="/assets/js/angular.min.js"></script>
+    <script src="/assets/js/angular-route.js"></script>
+</head>
+<body>
+    <main ng-view></main>
+
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row center">
+                <a href="https://www.facebook.com/ACSSPH/?fref=ts"><img src="assets/images/facebook.png" class="social-media"></a>
+                <a href="https://twitter.com/ACSSUPLB"><img src="assets/images/twitter.png" class="social-media"></a>
+                <a href="https://plus.google.com/101746643625582036040"><img src="assets/images/gplus.png" class="social-media"></a>
+            </div>
+            <div class="row center">
+                <p class="white-text footer-links">|</p>
+                <a class="white-text footer-links" href="#">ABOUT</a>
+                <p class="white-text footer-links">|</p>
+                <a class="white-text footer-links" href="#">CONTACT</a>
+                <p class="white-text footer-links">|</p>
+            </div>
+        </div>
+        <div class="footer-copyright black">
+            <div class="container center">
+                © 2016 ACSS-UPLB | All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers/recruiter.controller.js"></script>
+    <script type="text/javascript" src="services/recruiter.service.js"></script>
+    <script type="text/javascript" src="directives/dropdown.directive.js"></script>
+</body>
+</html>
+

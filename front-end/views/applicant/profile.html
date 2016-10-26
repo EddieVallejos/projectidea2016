@@ -1,0 +1,329 @@
+<!-- NAV BAR -->
+<div class="navbar-fixed"> 
+    <nav class="blue accent-4">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#/applicant/home" class="brand-logo tooltipped" data-position="right" data-tooltip="Home">
+                    <div class="row">
+                      <!-- ACSS LOGO -->
+                      <div class="col s12 m2"><img src="/../../assets/images/logo.png" id="acsslogo"></div>
+                      <!-- APP NAME -->
+                      <div class="col s12 m10">
+                        <span class="white-text" id="appname">&nbsp;&nbsp;ACSS++ | Profile</span>
+                      </div>
+                    </div>
+                </a>
+                <!-- MENU -->
+                <ul class="right hide-on-med-and-down">
+                    <li>username</li>
+                    <li><a href="#/applicant/profile" class="tooltipped" data-position="bottom" data-tooltip="Profile"><i class="material-icons">perm_identity</i></a></li>
+                    <li><a href="#/applicant/announcement" class="tooltipped" data-position="bottom" data-tooltip="Announcement"><i class="material-icons">announcement</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-beloworigin="true" data-hover="true" data-activates="dropdown1"><i class="material-icons">settings</i></a></li>
+                </ul>
+                <!-- SETTINGS DROPDOWN -->
+                <ul id="dropdown1" class="dropdown-content">
+                  <li><a href="#!">Sign Out</a></li>
+                </ul>
+                <!-- SIDE NAV FOR MOBILE -->
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><div class="userView light-blue darken-3">
+                    <a href="#!user"><img class="circle" src="assets/images/jem.jpg"></a>
+                    <a href="#!name"><span class="white-text name">Jemimah Mae Molina</span></a>
+                    <a href="#!email"><span class="white-text email">jhmolina@up.edu.ph</span></a>
+                </div></li>
+                    <li><a href="#/applicant/home">Home</a></li>
+                    <li><a href="#/applicant/profile">Profile</a></li>
+                    <li><a href="#/applicant/announcement">Announcements</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container center">
+    <div class="row" style="padding: 3% 3% 0% 3%"  align="middle">
+        <div class="progress">
+            <div class="determinate" style="width: 90%;"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m4 l4" style="padding: 0% 2% 0% 2%">
+            <div class="row">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../assets/images/eddie.jpg" id="profile-pic" >
+                    </div>
+                    <div class="card-content">
+                        <p>EddieZoned</p>
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                              <i class="material-icons circle">folder</i>
+                              <span class="title">Application form</span>
+                              <p>August 19, 2016</p>
+                            </li>
+                            <li class="collection-item avatar">
+                              <i class="material-icons circle">assignment</i>
+                              <span class="title">Academic exam</span>
+                              <p>August 22, 2016</p>
+                            </li>
+                            <li class="collection-item avatar">
+                              <i class="material-icons circle">question_answer</i>
+                              <span class="title">Panel interview</span>
+                              <p>August 25, 2016</p>
+                            </li>
+                            <li class="collection-item avatar">
+                              <i class="material-icons circle">assignment_ind</i>
+                              <span class="title">Reporting</span>
+                              <p>September 2, 2016</p>
+                            </li>
+                            <li class="collection-item avatar">
+                              <i class="material-icons circle">done_all</i>
+                              <span class="title">Finals</span>
+                              <p>September 3, 2016</p>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="blue-text darken-3">See details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8 l8" style="padding: 0% 2% 0% 2%">
+            <div class="row">
+                <div class="card">
+                    <div class="card-content">
+                        <table class="center">
+                            <tbody>
+                            <tr>
+                                <th>Username:</th>
+                                <td>EddieZoned</td>
+                            </tr>
+                            <tr>
+                                <th>Password:</th>
+                                <td>********</td>
+                                <td><button class="waves-effect waves-light light-blue darken-3 btn modal-trigger right" id="editup-btn">Edit</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- EDIT USERNAME & PASSWORD MODAL -->
+                        <div id="editup" class="modal">
+                            <div class="modal-content">
+                                <form style="text-align: left">
+                                    <div class="row">
+                                        <div class="input-field col s12 m12">
+                                            <input value="EddieZoned" id="username" type="text" class="validate">
+                                            <label for="username">Username</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m12">
+                                            <input value="password" id="password" type="password" class="validate">
+                                            <label for="password">Password</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class=" modal-action modal-close btn waves-effect waves-light light-blue darken-3">Save Changes</a>
+                            </div>
+                        </div>
+
+                        <table class="center">
+                            <tbody>
+                            <tr>
+                                <th>Personal Information</th>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td>Eddie Antalan Vallejos</td>
+                            </tr>
+                            <tr>
+                                <td>Nickname:</td>
+                                <td>Eddie</td>
+                            </tr>
+                            <tr>
+                                <td>Email address:</td>
+                                <td>eavallejos@up.edu.ph</td>
+                            </tr>
+                            <tr>
+                                <td>Contact number:</td>
+                                <td>09778404162</td>
+                            </tr>
+                            <tr>
+                                <th>Educational Information</th>
+                            </tr>
+                            <tr>
+                                <td>Student number:</td>
+                                <td>2014-12701</td>
+                            </tr>
+                            <tr>
+                                <td>Degree program:</td>
+                                <td>BSCS</td>
+                            </tr>
+                            <tr>
+                                <td>Adviser</td>
+                                <td>Mam Miyah Queliste</td>
+                            </tr>
+                            <tr>
+                                <td>Year in curriculum:</td>
+                                <td>Junior</td>
+                            </tr>
+                            <tr>
+                                <td>Overall GWA:</td>
+                                <td>1.0</td>
+                            </tr>
+                            <tr>
+                                <td>Preferred PL(s):</td>
+                                <td>language of love</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>Some Other Questions</th>
+                            </tr>
+                            <tr>
+                                <td>Why do you want to join our organization?</td>
+                            </tr>
+                            <tr>
+                                <td><3<3<3</td>
+                            </tr>
+                            <tr>
+                                <td>What can you offer to our organization?</td>
+                            </tr>
+                            <tr>
+                                <td><3<3<3</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!-- Modal Trigger -->
+                        <button class="waves-effect waves-light light-blue darken-3 btn modal-trigger" id="editprofile-btn" ng-click="updateProfile(user)">Edit Profile</button>
+
+                        <!-- Modal Structure -->
+                        <div id="editprofile" class="modal" ng-controller="RecruitmentCtrl">
+                            <div class="modal-content">
+                                <h4>Edit Profile</h4>
+                                <form style="text-align: left">
+                                    
+                                    <label>Personal Information</label>
+                                    <div class="row">
+                                        <div class="input-field col s12 m3 l3">
+                                            <input value="Vallejos" id="lname" type="text" class="validate" ng-model="user.surname">
+                                            <label for="lname">Last name</label>
+                                        </div>
+                                        <div class="input-field col s12 m3 l3">
+                                            <input value="Eddie" id="fname" type="text" class="validate" ng-model="user.givenname">
+                                            <label for="fname">First name</label>
+                                        </div>
+                                        <div class="input-field col s12 m2 l2">
+                                            <input value="Antalan" id="mname" type="text" class="validate" ng-model="user.middlename">
+                                            <label for="mname">Middle name</label>
+                                        </div>
+                                        <div class="input-field col s12 m2 l2">
+                                            <input value="N/A" id="suffix" type="text" class="validate">
+                                            <label for="Suffix">Suffix</label>
+                                        </div>
+                                        <div class="input-field col s12 m2 l2">
+                                            <input value="Eddie" id="nname" type="text" class="validate">
+                                            <label for="nname">Nickname</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="eavallejos@up.edu.ph"  id="email" type="text" class="validate" ng-model="user.emailadd">
+                                            <label for="email">Email address</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="09778404162" id="contact" type="text" class="validate" ng-model="user.contactnum">
+                                            <label for="contact">Contact number</label>
+                                        </div>
+                                    </div>
+                                    <label>Educational Information</label>
+                                    <div class="row">
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="2014-12701" id="studno" type="text" class="validate" ng-model="user.studno">
+                                            <label for="studno">Student number</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="BSCS"  id="course" type="text" class="validate" ng-model="user.degreeprog">
+                                            <label for="course">Degree program</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="Mam Miyah Queliste" id="adviser" type="text" class="validate" ng-model="user.adviser">
+                                            <label for="adviser">Adviser</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l6" id="year">
+                                            <select class="inputfields" ng-model="user.year">
+                                                <option value="">Year in curriculum</option>
+                                                <option value="1">Sophomore</option>
+                                                <option value="2" selected>Junior</option>
+                                                <option value="3">Senior</option>
+                                            </select>
+                                            <label for="year">Year in curriculum</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="1.0" id="gwa" type="text" class="validate" ng-model="user.gwa">
+                                            <label for="gwa">Overall GWA</label>
+                                        </div>
+                                        <div class="input-field col s12 m6 l6">
+                                            <input value="language of love"  id="gwa" type="text" class="validate" ng-model="user.prefproglang">
+                                            <label for="gwa">Preferred programming language/s</label>
+                                        </div>
+                                    </div>
+                                    <label>Some Other Questions</label>
+                                    <div class="row">
+                                        <div class="input-field col s12" ng-model="user.essay1">
+                                            <input value="<3 <3 <3" id="why"  type="text" class="validate"></input>
+                                            <label for="why">Why do you want to join our organization?</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12" ng-model="user.essay2">
+                                            <input value="<3 <3 <3" id="what" type="text" class="validate"></input>
+                                            <label for="what">What can you offer to our organization?</label>
+                                        </div>
+                                    </div>
+                                    <label>Schedule</label>
+                                    <div class="row" style="margin-top:-12px;">
+                                        <div class="input-field col s12">
+                                            <div class="file-field input-field">
+                                                <div class="btn grey lighten-2 black-text">
+                                                    <span>Browse</span>
+                                                    <input type="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input value="14520556_10154659498742922_8637349490065642455_n.png" class="file-path validate" type="text" ng-model="user.sched">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12" style="text-align:center;">
+                                            <input type="checkbox" class="filled-in" id="filled-in-box">
+                                            <label for="filled-in-box">I certify that the above information is true and correct as to the best of my knowledge.</label>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class=" modal-action modal-close btn waves-effect waves-light light-blue darken-3" ng-click="updateProfile(user)">Save Changes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/../../assets/js/custom.js"></script>

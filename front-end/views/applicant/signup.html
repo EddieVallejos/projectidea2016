@@ -1,0 +1,130 @@
+<div class="container d" ng-controller="RecruitmentCtrl">
+    <div class="card bordered z-depth-2">
+        <div class="card-header light-blue darken-3">
+            <a href="#/" class="white-text"><img class="responsive-img center-align" id="acsslogo" src="../assets/images/logo.png" id="acsslogo" align="middle"></a>
+        </div>
+        <div class="card-content">
+            <form method="POST">
+                <label>Credentials</label>
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <input id="username" type="text" class="validate" ng-model="user.username">
+                        <label for="username">&nbsp;&nbsp;&nbsp;Username</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <input id="password" type="password" class="validate" ng-model="user.password">
+                        <label for="password">&nbsp;&nbsp;&nbsp;Password</label>
+                    </div>
+                </div>
+                <label>Personal Information</label>
+                <div class="row">
+                    <div class="input-field col s12 m3 l3">
+                        <input id="lname" type="text" class="validate" ng-model="user.surname">
+                        <label for="lname">&nbsp;&nbsp;&nbsp;Last name</label>
+                    </div>
+                    <div class="input-field col s12 m3 l3">
+                        <input id="fname" type="text" class="validate" ng-model="user.givenname">
+                        <label for="fname">&nbsp;&nbsp;&nbsp;First name</label>
+                    </div>
+                    <div class="input-field col s12 m2 l2">
+                        <input id="mname" type="text" class="validate" ng-model="user.middlename">
+                        <label for="mname">&nbsp;&nbsp;&nbsp;Middle name</label>
+                    </div>
+                    <div class="input-field col s12 m2 l2">
+                        <input id="suffix" type="text" class="validate" ng-model="user.suffix">
+                        <label for="Suffix">&nbsp;&nbsp;&nbsp;Suffix</label>
+                    </div>
+                    <div class="input-field col s12 m2 l2">
+                        <input id="nname" type="text" class="validate">
+                        <label for="nname">&nbsp;&nbsp;&nbsp;Nickname</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <input id="email" type="text" class="validate" ng-model="user.emailadd">
+                        <label for="email">&nbsp;&nbsp;&nbsp;Email address</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <input id="contact" type="text" class="validate" ng-model="user.contactnum">
+                        <label for="contact">&nbsp;&nbsp;&nbsp;Contact number</label>
+                    </div>
+                </div>
+                <label>Educational Information</label>
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <input id="studno" type="text" class="validate" ng-model="user.studno">
+                        <label for="studno">&nbsp;&nbsp;&nbsp;Student number</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <input id="course" type="text" class="validate" ng-model="user.degreeprog">
+                        <label for="course">&nbsp;&nbsp;&nbsp;Degree program</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <input id="adviser" type="text" class="validate" ng-model="user.adviser">
+                        <label for="adviser">&nbsp;&nbsp;&nbsp;Adviser</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <select class="inputfields" ng-model="user.year">
+                            <option value="" disabled selected>Year in curriculum</option>
+                            <option value="1">Sophomore</option>
+                            <option value="2">Junior</option>
+                            <option value="3">Senior</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <input id="gwa" type="text" class="validate" ng-model="user.gwa">
+                        <label for="gwa">&nbsp;&nbsp;&nbsp;Overall GWA</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <input id="gwa" type="text" class="validate" ng-model="user.prefproglang">
+                        <label for="gwa">&nbsp;&nbsp;&nbsp;Preferred programming language/s</label>
+                    </div>
+                </div>
+                <label>Some Other Questions</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="why" type="text" class="validate" ng-model="user.essay1"></input>
+                        <label for="why">&nbsp;&nbsp;&nbsp;Why do you want to join our organization?</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="what" type="text" class="validate" ng-model="user.essay2"></input>
+                        <label for="what">&nbsp;&nbsp;&nbsp;What can you offer to our organization?</label>
+                    </div>
+                </div>
+                <label>Schedule</label>
+                <div class="row" style="margin-top:-12px;">
+                    <div class="input-field col s12">
+                        <div class="file-field input-field">
+                            <div class="btn grey lighten-2 black-text">
+                                <span>Browse</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" ng-model="user.sched">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" style="text-align:center;">
+                        <input type="checkbox" class="filled-in" id="filled-in-box">
+                        <label for="filled-in-box">I certify that the above information is true and correct as to the best of my knowledge.</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 center-align">
+                        <a href="#" class="btn waves-effect waves-light light-blue darken-3" id="signup" ng-click="createAccount(user)" >Sign up</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../assets/js/custom.js"></script>

@@ -1,0 +1,189 @@
+/* body */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+body .container.b {
+    background: #212121;
+    display: table;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+body .container.d {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: #616161;
+}
+body .center.c {
+    background: #212121;
+    display: table-cell;
+    padding-top: 11%;
+    padding-bottom: 11%;
+    text-align: inherit;
+}
+/* log in modal */
+div#login {
+    width: 380px;
+    height: 380px;
+    overflow: hidden;
+}
+/* log in card */
+.card.bordered.cb{
+    max-width: 380px;
+}
+/* card header */
+.card .card-header {
+    padding: 10px;
+    text-align: center;
+}
+/* card content */
+.card .card-content {
+    padding: 20px;
+    padding-bottom: 35px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#acsslogo {
+    margin: 2px;
+    height: 60px;
+    width: 49px;
+}
+/* input boxes */
+input[type=text], input[type=password],  input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea, .select-wrapper input.select-dropdown {
+    border: 1px solid #ddd;
+    padding: 0px 10px;
+    box-sizing:border-box;
+    color: black;
+    margin-bottom: 0px;
+}
+/* valid color */
+input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #0277bd;
+    box-shadow: 0 1px 0 0 #0277bd;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field input[type=password]:focus, .input-field textarea.materialize-textarea:focus {
+    border-bottom: 1px solid #0277bd;
+    box-shadow: 0 1px 0 0 #0277bd;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label, .input-field textarea.materialize-textarea:focus + label {
+    color: #0277bd;
+}
+/* active label */
+label.active {
+    padding: 5px 1px;
+    border-bottom: #0277bd;
+}
+/* forgot password */
+#forgot {
+    font-size: 12px;
+}
+/* login button */
+#login {
+    width: 100%;
+}
+/* signup button */
+#signup {
+    width: 100%;
+}
+/* notification */
+.toast a {
+    color: #0277bd;
+    font-weight: bold;
+    cursor: pointer;
+}
+.toast span {
+    text-align: center;
+    width: 100%;
+}
+/* year dropdown */
+ul.dropdown-content.select-dropdown li span {
+    color: #000000; 
+}
+/* checkbox */
+[type="checkbox"].filled-in:checked + label:after {
+    border: 2px solid #0277bd;
+    background-color: #0277bd;
+}
+/* CONTENT */
+::selection {
+    color: black;
+    background-color: white;
+}
+/* NAV BAR */
+nav {
+    /*background-color: #0277bd;*/
+    height: 63px;
+    line-height: 60px;
+}
+/* ACSS LOGO */
+#acsslogo2 {
+    height: 55px;
+    vertical-align: middle;
+}
+/* APP NAME */
+#appname {
+    font-size: 25px;
+}
+/* DROPDOWN */
+.dropdown-content {
+    min-width: 120px;
+    max-height: 650px;
+    will-change: width, height;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #0277bd;
+}
+/* FOOTER */
+footer.page-footer {
+    margin-top: 0px;
+}
+.footer-links {
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+/* SOCIAL MEDIA LINKS */
+.social-media {
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.container {
+    height: 100%;
+}
+/* progress */
+.progress {
+    position: relative;
+    height: 4px;
+    display: block;
+    width: 85%;
+    height: 30px;
+    background-color: #e0e0e0 ;
+    border: 3px solid #0277bd;
+    border-radius: 2px;
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+}
+.progress .determinate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #0277bd;
+    transition: width .3s linear;
+}
+
+#textareaPost {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
