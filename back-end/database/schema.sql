@@ -20,7 +20,6 @@ CREATE TABLE recruit (
 	prefproglang VARCHAR(100) NOT NULL,
 	essay1 TEXT NOT NULL,
 	essay2 TEXT NOT NULL,
-	sched VARCHAR(100) NOT NULL,
 	progress ENUM('Orientation', 'Passing of Application Form', 'Panel Interview', 'Academic Exam', 'Reporting', 'Finals'),
 	grouping VARCHAR(5),
 	CONSTRAINT recruit_username_uk UNIQUE(username), 

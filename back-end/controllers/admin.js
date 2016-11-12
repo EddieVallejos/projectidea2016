@@ -56,7 +56,7 @@ exports.send_email = (req, res, next) => {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: req.body.user,
+            user: req.body.email,
             pass: req.body.password
         }
     });
@@ -64,8 +64,8 @@ exports.send_email = (req, res, next) => {
     var text = 'Sample Text';
 
     var mailOptions = {
-        from: req.body.user,
-        to: req.body.sendTo,
+        from: req.body.email,
+        to: req.body.recipient,
         subject: 'Applicant Create Account',
         text: text
     };

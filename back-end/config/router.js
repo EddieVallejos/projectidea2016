@@ -15,7 +15,6 @@ module.exports = (router) => {
 
     //functionalities for admin
     router.get ('/api/mainadmin/logs',          admin.check_logs);
-    router.post('/api/mainadmin/invite',        admin.send_email);
     router.put ('/api/mainadmin/appoint',       admin.appoint_admin);
 
     //functionalities for recruiter
@@ -23,6 +22,7 @@ module.exports = (router) => {
     router.put ('/api/admin/progress',          recruiter.update_progress);
     router.post('/api/admin/announcement',      recruiter.post_announcements);
     router.post('/api/admin/promote',           recruiter.promote_applicant);
+    router.post('/api/admin/invite',            recruiter.send_email);
 
     //functionalities for recruit
     router.post('/api/applicant/signup',        all.create_account);

@@ -16,7 +16,10 @@
             getAllRecruits      : getAllRecruits,
             getAllAnnouncements : getAllAnnouncements,
             updateProgress      : updateProgress,
-            postAnnouncement    : postAnnouncement
+            postAnnouncement    : postAnnouncement,
+            promoteApplicant    : promoteApplicant,
+            sendInvite          : sendInvite,
+            appointAdmin        : appointAdmin
         }
 
         return service;
@@ -56,6 +59,62 @@
             }
 
             $http.post('/api/admin/announcement', data)
+            .then((res) => {
+                    console.log(res);
+                    deferred.resolve(res);
+                }, (err) => {
+                    deferred.reject(err);
+                });
+
+            return deferred.promise;
+        }
+
+        function sendInvite(email, password, recipient) {
+            let deferred = $q.defer();
+
+            let data = {
+                email: email,
+                password: password,
+                recipient: recipient
+            }
+
+            $http.post('/api/admin/invite', data)
+            .then((res) => {
+                    console.log(res);
+                    deferred.resolve(res);
+                }, (err) => {
+                    deferred.reject(err);
+                });
+
+            return deferred.promise;
+        }
+
+        function promoteApplicant(recruit) {
+            let deferred = $q.defer();
+
+            let data = {
+                studno : recruit.studno
+            }
+
+            $http.post('/api/admin/promote', data)
+            .then((res) => {
+                    console.log(res);
+                    deferred.resolve(res);
+                }, (err) => {
+                    deferred.reject(err);
+                });
+
+            return deferred.promise;
+        }
+
+        function appointAdmin(studno) {
+            let deferred = $q.defer();
+
+            let data = {
+                studno : studno
+            }
+
+            $http.post('/api/mainadmin/appoint', data)
             .then((res) => {
                     console.log(res);
                     deferred.resolve(res);

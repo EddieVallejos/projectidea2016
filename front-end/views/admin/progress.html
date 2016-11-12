@@ -77,6 +77,9 @@
               <div class="col s12 m3">
                  <button class="btn waves-effect waves-light deep-purple accent-3" ng-click='updateProgress(recruit)'>UPDATE</button> 
               </div>
+              <div class="col s12 m3">
+                 <button class="btn waves-effect waves-light deep-purple accent-3" ng-click='promoteApplicant(recruit)'>PROMOTE APPLICANT</button> 
+              </div>
             </div>
           </div>
         </div>
@@ -91,12 +94,20 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
+              <input id="email" type="email" class="validate" ng-model="email">      
               <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12"> 
+              <input id="password" type="password" class="validate" ng-model="password">
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="recipient" type="email" class="validate" ng-model="recipient">
+              <label for="recipient">Recipient</label>
             </div>
           </div>
           <div class="row right-align">
-            <button class="btn waves-effect waves-light deep-purple accent-3">INVITE</button>
+            <button class="btn waves-effect waves-light deep-purple accent-3" ng-click='sendInvite(email, password, recipient)'>INVITE</button>
           </div>
         </div>
       </div>

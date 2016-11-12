@@ -1,6 +1,7 @@
 'use strict';
 
 const db = require(__dirname + '/../lib/mysql');
+const nodemailer = require('nodemailer');
 
 exports.update_progress = (req, res, next) => {
     const query_string = 'UPDATE recruit SET progress = ? WHERE studno = ?';
@@ -75,5 +76,34 @@ exports.promote_applicant = (req, res, next) => {
         } else {
             console.log('APPLICANT DOES NOT EXIST');
         }
+    });
+};
+
+exports.send_email = (req, res, next) => {
+    var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: req.body.email,
+            pass: req.body.password
+        }
+    });
+
+    var text = 'Sample Text';
+
+    var mailOptions = {
+        from: req.body.email,
+        to: req.body.recipient,
+        subject: 'Applicant Create Account',
+        text: text
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            console.log(error);
+            res.json({yo: 'error'});
+        }else{
+            console.log('Message sent: ' + info.response);
+            res.json({yo: info.response});
+        };
     });
 };

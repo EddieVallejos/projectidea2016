@@ -12,6 +12,9 @@
         $scope.announcements = [];
         $scope.updateProgress = updateProgress;
         $scope.postAnnouncement = postAnnouncement;
+        $scope.promoteApplicant = promoteApplicant;
+        $scope.sendInvite = sendInvite;
+        $scope.appointAdmin = appointAdmin;
 
         populateRecruits();
         populateAnnouncements();
@@ -43,6 +46,21 @@
         function postAnnouncement(announcement) {
             RecruiterService
                 .postAnnouncement(announcement);
+        }
+
+        function promoteApplicant(recruit) {
+            RecruiterService
+                .promoteApplicant(recruit);
+        }
+
+        function sendInvite(email, password, recipient) {
+            RecruiterService
+                .sendInvite(email, password, recipient);
+        }
+
+        function appointAdmin(studno) {
+            RecruiterService
+                .appointAdmin(studno);
         }
     }
 })();
